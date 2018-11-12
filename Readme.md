@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Сергей Синденов](https://up.htmlacademy.ru/htmlcss/23/user/141216).
-* Наставник: `Неизвестно`.
+* Наставник: [Антон Шабельников](https://htmlacademy.ru/profile/artyglitch).
 
 ---
 
