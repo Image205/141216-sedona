@@ -1,84 +1,80 @@
+<!DOCTYPE html>
 <html lang="ru">
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
   </head>
   <body>
-    <header>
+    <header class="page_header">
     <nav class="main_menu">
       <ul class="list">
-        <li class="item"><a class="button" href="info.html">Информация</a></li>
-        <li class="item"><a class="button" href="media.html">Фото и видео</a></li>
-        <li class="logo"><a class="logo" href="index.html">City of Sedona Logo</a></li>
-        <li class="item"><a class="button" href="map.html">Карта штата</a></li>
-        <li class="item"><a class="button iamhere">Гостиницы</a></li>
+        <li class="item"><a class="button" href="/info.html">Информация</a></li>
+        <li class="item"><a class="button" href="/media.html">Фото и видео</a></li>
+        <li class="item"><a class="button" href="/map.html">Карта штата</a></li>
+        <li class="item"><a class="button active">Гостиницы</a></li>
       </ul>
     </nav>
+    <a class="logo" href="/">City of Sedona Logo</a>
     </header>
-    <main>
+    <main class="page_main">
       <section class="hotel_container">
-        <a href="#"><img class="hotel_miniature" src="https://placehold.it/120x100" alt="Amara resort&spa"></a>  <!-- ссылка ведет на полную страницу данного отеля -->
-        <h2>Amara resort&spa</h2>
-        <table class="hotel_info">
-          <tr>
-            <td>Гостиница</td>
-            <td>От 4000р</td>
-          </tr>
-          <tr>
-            <td><a class="view_more button" href="#">Подробнее</a></td>
-            <td><a class="reserving button">Забронировать</a></td>
-          </tr>
-        </table>
-        <p class="rate">
+        <article class="hotel_item">
+          <header class="hotel_header">
+            <h2>Amara resort&spa</h2>
+          </header>
+          <a href="#"><img class="hotel_miniature" src="https://placehold.it/135x90" alt="Amara resort&spa"></a>  <!-- ссылка ведет на полную страницу данного отеля -->
+          <span class="apts_type">Гостиница</span>
+          <span class="price">От 4000р</span>
+          <a class="view_more button" href="#">Подробнее</a>
+          <a class="reserving button">Забронировать</a>
+          <p class="rate">
           <span class="stars">4</span>
           <span class="rating">Рейтинг: 8.5</span>
-        </p>
-      </section>
-      <section class="hotel_container">
-          <a href="#"><img class="hotel_miniature" src="https://placehold.it/120x100" alt="Desert Quail Inn"></a>  <!-- ссылка ведет на полную страницу данного отеля -->
-          <h2>Desert Quail Inn</h2>
-          <table class="hotel_info">
-            <tr>
-              <td>Мотель</td>
-              <td>От 3000р</td>
-            </tr>
-            <tr>
-              <td><a class="view_more button" href="#">Подробнее</a></td>
-              <td><a class="reserving button">Забронировать</a></td>
-            </tr>
-          </table>
+          </p>
+        </article>
+
+        <article class="hotel_item">
+          <header class="hotel_header">
+            <h2>Desert Quail Inn</h2>
+          </header>
+          <a href="#"><img class="hotel_miniature" src="https://placehold.it/135x90" alt="Desert Quail Inn"></a>  <!-- ссылка ведет на полную страницу данного отеля -->
+          <span class="apts_type">Мотель</span>
+          <span class="price">От 3000р</span>
+          <a class="view_more button" href="#">Подробнее</a>
+          <a class="reserving button">Забронировать</a>
           <p class="rate">
-              <span class="stars">3</span>
-              <span class="rating">Рейтинг: 8.9</span>
-            </p>
-        </section>
-        <section class="hotel_container">
-            <a href="#"><img class="hotel_miniature" src="https://placehold.it/120x100" alt="Villas at Poco Diablo"></a>  <!-- ссылка ведет на полную страницу данного отеля -->
+            <span class="stars">3</span>
+            <span class="rating">Рейтинг: 8.9</span>
+          </p>
+        </article>
+
+        <article class="hotel_item">
+          <header class="hotel_header">
             <h2>Villas at Poco Diablo</h2>
-            <table class="hotel_info">
-              <tr>
-                <td>Апартаменты</td>
-                <td>От 2000р</td>
-              </tr>
-              <tr>
-                <td><a class="view_more button" href="#">Подробнее</a></td>
-                <td><a class="reserving button">Забронировать</a></td>
-              </tr>
-            </table>
-            <p class="rate">
-                <span class="stars">2</span>
-                <span class="rating">Рейтинг: 9.2</span>
-              </p>
-          </section>
+          </header>
+          <a href="#"><img class="hotel_miniature" src="https://placehold.it/135x90" alt="Villas at Poco Diablo"></a>  <!-- ссылка ведет на полную страницу данного отеля --> 
+          <span class="apts_type">Апартаменты</span>
+          <span class="price">От 2000р</span>
+          <a class="view_more button" href="#">Подробнее</a>
+          <a class="reserving button">Забронировать</a>
+          <p class="rate">
+            <span class="stars">2</span>
+            <span class="rating">Рейтинг: 9.2</span>
+          </p>
+        </article>
+      </section>
     </main>
-    <footer>
+    <footer class="page_footer">
       <p class="hashtag">#VISITSEDONA</p>
-      <ul class="social">
-        <li class="social_vk"><a href="https://vk.com">Вконтакте</a></li>
-        <li class="social_fb"><a href="https://facebook.com">Facebook</a></li>
-        <li class="social_ut"><a href="https://youtube.com">YouTube</a></li>
-      </ul>
-      <p class="credits"> Website by <img src="https://placehold.it/100x40" alt="HTML Academy"></p>
+      <section class="social">
+        <h2 class="hidden">Седона в социальных сетях</h2>
+        <ul class="social_buttons">
+          <li class="social_vk"><a href="https://vk.com">Вконтакте</a></li>
+          <li class="social_fb"><a href="https://facebook.com">Facebook</a></li>
+          <li class="social_ut"><a href="https://youtube.com">YouTube</a></li>
+        </ul>
+      </section>
+      <p class="credits"> Website by <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="https://placehold.it/115x41?text=HTML+Academy" alt="HTML Academy"></a></p>
     </footer>
   </body>
 </html>
