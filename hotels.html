@@ -19,48 +19,52 @@
     <main class="page_main">
       <section class="filter">
         <h2 class="visually_hidden">Фильтр отелей</h2>
-        <fieldset class="filter_checkbox">
-          <legend>Инфраструктура</legend>
-          <ul>
-            <li><label><input class="form_checkbox" type="checkbox" name="swimming_pool" checked> Бассейн</label></li>
-            <li><label><input class="form_checkbox" type="checkbox" name="parking"> Парковка</label></li>
-            <li><label><input class="form_checkbox" type="checkbox" name="wifi"> Wi-Fi</label></li>
-          </ul>
-        </fieldset>
-        <fieldset class="filter_checkbox">
-          <legend>Тип жилья</legend>
-          <ul>
-            <li><label><input class="form_checkbox" type="checkbox" name="hotel" checked> Гостиница</label></li>
-            <li><label><input class="form_checkbox" type="checkbox" name="motel" checked> Мотель</label></li>
-            <li><label><input class="form_checkbox" type="checkbox" name="apts" checked> Апартаменты</label></li>
-          </ul>
-        </fieldset>
-        <fieldset class="price_per_day">
-          <legend>Стоимость в сутки</legend>
-          <!-- модуль со слайдером -->
-        </fieldset>
+        <form class="hotel_filter" action="https://echo.htmlacademy.ru" method="POST">
+          <fieldset class="filter_checkbox">
+            <legend>Инфраструктура</legend>
+            <ul>
+              <li><label><input class="form_checkbox" type="checkbox" name="swimming_pool" checked> Бассейн</label></li>
+              <li><label><input class="form_checkbox" type="checkbox" name="parking"> Парковка</label></li>
+              <li><label><input class="form_checkbox" type="checkbox" name="wifi"> Wi-Fi</label></li>
+            </ul>
+          </fieldset>
+          <fieldset class="filter_checkbox">
+            <legend>Тип жилья</legend>
+            <ul>
+              <li><label><input class="form_checkbox" type="checkbox" name="hotel" checked> Гостиница</label></li>
+              <li><label><input class="form_checkbox" type="checkbox" name="motel" checked> Мотель</label></li>
+              <li><label><input class="form_checkbox" type="checkbox" name="apts" checked> Апартаменты</label></li>
+            </ul>
+          </fieldset>
+          <fieldset class="price_per_day">
+            <legend>Стоимость в сутки</legend>
+            <!-- модуль со слайдером -->
+          </fieldset>
+        </form>
       </section>
       <section class="filter_result">
         <h2 class="visually_hidden">Результаты поиска</h2>
         <span class="result">Найдено: 3</span>
-        <fieldset class="result_sort">
-          <legend>Сортировка: </legend>
-          <label> 
-            <ul>
-              <li><label><input class="sort_method" type="radio" name="sort_method" value="by_price" checked> По цене</label></li>
-              <li><label><input class="sort_method" type="radio" name="sort_method" value="by_type"> По типу</label></li>
-              <li><label><input class="sort_method" type="radio" name="sort_method" value="by_rating"> По рейтингу</label></li>
-            </ul>
-          </label>
-        </fieldset>
-        <fieldset class="result_sort">
-          <legend class="visually_hidden">Сортировка по направлению</legend>
-            <ul>
-              <li><label><input class="sort_method" type="radio" name="sort_method_order" value="ascending">По возрастанию</label></li>
-              <li><label><input class="sort_method" type="radio" name="sort_method_order" value="descending" checked>По убыванию</label></li>
-            </ul>
-          </label>
-        </fieldset>
+        <form class="sort_filter" action="https://echo.htmlacademy.ru">
+          <fieldset class="result_sort">
+            <legend>Сортировка: </legend>
+            <label> 
+              <ul>
+                <li><label><input class="sort_method" type="radio" name="sort_method" value="by_price" checked> По цене</label></li>
+                <li><label><input class="sort_method" type="radio" name="sort_method" value="by_type"> По типу</label></li>
+                <li><label><input class="sort_method" type="radio" name="sort_method" value="by_rating"> По рейтингу</label></li>
+              </ul>
+            </label>
+          </fieldset>
+          <fieldset class="result_sort">
+            <legend class="visually_hidden">Сортировка по направлению</legend>
+              <ul>
+                <li><label><input class="sort_method" type="radio" name="sort_method_order" value="ascending">По возрастанию</label></li>
+                <li><label><input class="sort_method" type="radio" name="sort_method_order" value="descending" checked>По убыванию</label></li>
+              </ul>
+            </label>
+          </fieldset>
+        </form>
       </section>
 
       <section class="hotel_container">
