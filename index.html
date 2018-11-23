@@ -13,9 +13,9 @@
         <li class="item"><a class="button" href="/map.html">Карта штата</a></li>
         <li class="item"><a class="button" href="/hotels.html">Гостиницы</a></li>
       </ul>
+      <a class="logo"><img src="img/content/logo-sedona.svg" width="140" height="72" alt="Логотип города Седона"></a>
     </nav>
-    <a class="logo"><img src="img/content/logo-sedona.svg" width="140" height="72" alt="City of Sedona Logo"></a>
-    <h1 class="hidden">Welcome to the gorgeous Sedona</h1>
+    <h1 class="visually_hidden">Добро пожаловать в великолепную Седону</h1>
     </header>
     <main class="page_main">
       <img class="title_text" src="https://placehold.it/459x353" alt="Welcome to the gorgeous Sedona">
@@ -25,10 +25,12 @@
           <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
         </header>
         <article class="feature">
-              <h3>Настоящий городок</h3>
-              <span>— №1 —</span>
-              <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
-              <img src="img/decor/index_first_decor.jpg" alt="Настоящий городок">
+          <header class="article_header">
+            <h3>Настоящий городок</h3>
+            <span>— №1 —</span>
+            <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+            <img src="img/decor/index_first_decor.jpg" alt="Настоящий городок">
+          </header>
           <ul class="list">
             <li class="item">
               <span class="icon"></span>
@@ -48,10 +50,12 @@
           </ul>
         </article>
         <article class="feature">
-          <img src="img/decor/index_second_decor.jpg" alt="Мост дьявола">
-          <h3>Там есть мост дьявола</h3>
-          <span>— №2 —</span>
-          <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+          <header class="article_header">
+            <img src="img/decor/index_second_decor.jpg" alt="Мост дьявола">
+            <h3>Там есть мост дьявола</h3>
+            <span>— №2 —</span>
+            <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+          </header>
           <ul class="list">
             <li class="item">
               <h3>Небольшая площадь</h3>
@@ -78,20 +82,50 @@
         </header>
         <a href="#" class="form_label button">Поиск гостиницы в Седоне</a>
         <!-- Форма поиска букинга -->
-        <img class="map" src="img/content/index_map.jpg" alt="Карта">
+        <form class="hotel_find" action="https://echo.htmlacademy.ru" method="POST">
+          <fieldset>
+            <legend class="visually_hidden">Поиск гостиницы в Седоне</legend>
+            <p class="full_width">
+              <label>Дата заезда: 
+                <input class="date_input" type="text" name="arrive" placeholder="24 апреля 2017">
+                <input class="button_calendar" type="button" name="cal_arrive" value="Календарь">
+              </label>
+            </p>
+            <p class="full_width">
+              <label>Дата выезда: 
+                <input class="date_input" type="text" name="departure" placeholder="4 июля 2017">
+                <input class="button_calendar" type="button" name="cal_departure" value="Календарь">
+              </label>
+            </p>
+            <p class="half_width">
+              <label>Взрослые: 
+                <input class="form_button minus_button" type="button" name="adult_minus" value="-">
+                <input class="quantity" type="text" name="adult" placeholder="2">
+                <input class="form_button plus_button" type="button" name="adult_plus" value="+">
+              </label>
+              <label>Дети: 
+                <input class="form_button minus_button" type="button" name="child_minus" value="-">
+                <input class="quantity" type="text" name="child" placeholder="0">
+                <input class="form_button plus_button" type="button" name="child_plus" value="+">
+              </label>
+            </p>
+            <input class="button" type="submit" value="Найти">
+          </fieldset>
+        </form>
+        <img class="map" src="img/content/index_map.jpg" alt="Карта окрестностей города Седона">
       </section>
     </main>
     <footer class="page_footer">
       <p class="hashtag">#VISITSEDONA</p>
       <section class="social">
-        <h2 class="hidden">Седона в социальных сетях</h2>
+        <h2 class="visually_hidden">Седона в социальных сетях</h2>
         <ul class="social_buttons">
-          <li class="social_vk"><a href="https://vk.com">Вконтакте</a></li>
-          <li class="social_fb"><a href="https://facebook.com">Facebook</a></li>
-          <li class="social_ut"><a href="https://youtube.com">YouTube</a></li>
+          <li class="social_vk"><a href="https://vk.com" aria-label="Наша страница в Вконтакте">Вконтакте</a></li>
+          <li class="social_fb"><a href="https://facebook.com" aria-label="Наша страница на Facebook">Facebook</a></li>
+          <li class="social_ut"><a href="https://youtube.com" aria-label="Наш канал на YouTube">YouTube</a></li>
         </ul>
       </section>
-      <p class="credits"> Website by <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/icon/logo-htmlacademy.svg" width="115" height="41" alt="HTML Academy"></a></p>
+      <p class="credits"> Website by <a href="https://htmlacademy.ru/intensive/htmlcss" area-label="HTML Academy"><img src="img/icon/logo-htmlacademy.svg" width="115" height="41" alt="HTML Academy"></a></p>
     </footer>
   </body>
 </html>
