@@ -40,8 +40,12 @@
             <legend>Стоимость в сутки(Р)</legend>
             <input class="price_window" type="text" value="От 0" aria-label="Фильтр по цене в сутки">
             <input class="price_window" type="text" value="До 3000" aria-label="Фильтр по цене в сутки">
-            <input class="slider_button" type="button">
-            <input class="slider_button" type="button">
+            <div class="slider_container">
+              <div class="slider_range">
+                <span><input class="slider_button" type="button"></span>
+                <span><input class="slider_button" type="button"></span>
+              </div>
+            </div>
           </fieldset>
           <input class="button show" type="submit" value="Показать"> 
         </form>
@@ -54,10 +58,12 @@
             <li><a href="#">По типу</a></li>
             <li><a href="#">По рейтингу</a></li>
           </ul>
+          <form class="hotel_filter" action="https://echo.htmlacademy.ru" method="GET">
           <ul class="sort_by_direction">
             <li><input class="arrow_button up" type="button" value="По возрастанию"></li>
             <li><input class="arrow_button down" type="button" value="По убыванию"></li>
           </ul>
+        </form>
       </section>
       <section class="hotel_container">
         <article class="hotel_item">
