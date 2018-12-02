@@ -15,7 +15,13 @@ body {
 a {
   text-decoration: none;
 }
-
+.visually_hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
 /*   Хедер    */
 .page_header {
   background-color: #fff;
@@ -64,8 +70,10 @@ a {
   color: #fff;
   background-color: #81b3d2;
 }
-.article h3 {
+.feature h3 {
+  font-size: 21px;
   line-height: 21px;
+  font-weight: 700;
 }
 .feature h3,
 .feature p {
@@ -206,7 +214,7 @@ a {
   line-height: 21px;
   text-transform: uppercase;
   text-align: center;
-  
+
   color: #fff;
   background-color: transparent;
   border: 2px solid #fff;
@@ -354,4 +362,73 @@ a:focus .logo {
 }
 a:active .logo {
   fill: #bdbbbc;
+}
+
+/* Сетка */
+.main_wrapper {
+  width: 1200px;
+  margin: 0 auto;
+}
+.main_menu {
+  display: flex;
+  justify-content: space-around;
+}
+.main_menu .list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+.main_menu .item {
+  outline: 1px solid black;
+  width: 240px;
+}
+.main_menu .right {
+  order: 2;
+  text-align: right;
+}
+.main_menu .logo {
+  order: 1;
+}
+.title_text {
+  padding: 76px 370px 73px;
+}
+.promo,
+.promo_header,
+.feature,
+.booking,
+.booking_header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.promo_header {
+  justify-content: space-around;
+  min-height: 215px;
+}
+.article_header,
+.feature_list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  min-height: 256px;
+}
+.feature:first-of-type .feature_list{
+  min-height: 330px;
+}
+.feature_item {
+  width: 400px;
+  outline: 1px solid slateblue;
+}
+.hotel_find,
+.form_label.button {
+  width: 568px;
+}
+.page_footer {
+  display: flex;
+  justify-content: space-between;
+}
+.hashtag,
+.social,
+.developed {
+  width: 400px;
 }
