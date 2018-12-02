@@ -20,6 +20,7 @@ a {
 .page_header {
   background-color: #fff;
 }
+/* У списков также необходимо сбрасывать padding и margin */
 .main_menu .list {
   list-style: none;
 }
