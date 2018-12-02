@@ -28,6 +28,8 @@ a {
 }
 /* У списков также необходимо сбрасывать padding и margin */
 .main_menu .list {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 .main_menu a {
@@ -81,6 +83,8 @@ a {
   text-align: center;
 }
 .feature ul {
+  padding: 0;
+  margin: 0;
   list-style: none;
 }
 .feature:nth-of-type(2) ul {
@@ -379,14 +383,6 @@ a:active .logo {
   padding: 0;
   margin: 0;
 }
-.main_menu .item {
-  outline: 1px solid black;
-  width: 240px;
-}
-.main_menu .right {
-  order: 2;
-  text-align: right;
-}
 .main_menu .logo {
   order: 1;
 }
@@ -412,6 +408,9 @@ a:active .logo {
   margin: 0;
   padding: 0;
   min-height: 256px;
+}
+.feature:nth-of-type(2) img {
+  order:-1;
 }
 .feature:first-of-type .feature_list{
   min-height: 330px;
