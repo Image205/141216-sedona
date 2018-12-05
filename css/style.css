@@ -73,6 +73,9 @@ a {
   color: #fff;
   background-color: #81b3d2;
 }
+.header_block {
+  width: 400px;
+}
 .feature h3 {
   font-size: 21px;
   line-height: 21px;
@@ -214,16 +217,57 @@ a {
   line-height: 21px;
   color: #fff;
 }
+
+
+
+/*  Выбор цены в фильтре  */
+
+.price_per_day {
+  margin-top: 27px;
+  margin-right: 60px;
+}
+.price_per_day legend {
+  text-align: left;
+  margin-bottom: 5px;
+}
+.price_container {
+  position: relative;
+  width: 314px;
+  height: 32px;
+  border: 2px solid #fff;
+  border-radius: 3px;
+  font-size: 0;
+  margin-bottom: 20px;
+}
+
 .price_window {
+  display: inline-block;
+  padding: 0;
+  
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
   text-align: center;
-
+  width: 150px;
+  height: 32px;
   color: #fff;
   background-color: transparent;
-  border: 2px solid #fff;
-  border-radius: 3px;
+  border: none;
+}
+.price_container::after {
+  content: "";
+  width: 2px;
+  height: 22px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+  background: #fff;
+}
+.price_window:last-of-type{
+  margin-left: 8px;
 }
 .price_window::placeholder {
   font-size: 14px;
@@ -233,19 +277,60 @@ a {
   text-align: center;
   color: #fff;
 }
+.slider_container {
+  position: relative;
+  height: 2px;
+  margin-bottom: 32px;
+  background: rgba(255, 255, 255, 0.3); 
+
+  font-size: 0;
+}
+.slider_bar {
+  height: 2px;
+  width: 80%;
+  background: #fff;
+}
+.slider_button {
+  position: absolute;
+  top: -9px;
+
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  
+  background: #ababab;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+}
+.slider_button:hover {
+  background: #1c4f80;
+}
+.slider_button_min {
+  left: 0;
+}
+.slider_button_max{
+  left: 80%;
+}
 .button.show {
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
+  margin: 0 auto;
+  padding: 6px 33px;
+
   color: #fff;
   background-color: transparent;
   border: 2px solid #fff;
   border-radius: 3px;
+  cursor: pointer;
 }
 .button.show:hover {
   color: #000;
   background-color: #fff;
 }
+
 /* Сортировка */
 .result {
   font-size: 21px;
@@ -370,25 +455,66 @@ a:active .logo {
 }
 
 /* Сетка */
+
+/* Главная страница */
 .main_wrapper {
   width: 1200px;
   margin: 0 auto;
 }
+.page_main::before {
+  position: absolute;
+  top: 507px;
+  content: "";
+  display: block;
+  width: 1200px;
+  height: 59px;
+  background-image: url(../img/decor/intro-mask.svg);
+  background-size: 1200px 59px;
+  background-repeat: no-repeat;
+}
 .main_menu {
-  display: flex;
-  justify-content: space-around;
+  position: relative;
 }
 .main_menu .list {
   display: flex;
+  flex-wrap: wrap;
   padding: 0;
   margin: 0;
 }
-.main_menu .logo {
-  order: 1;
+.main_menu .item {
+  padding-top: 14px;
+  padding-bottom: 15px;
+  width: 240px;
 }
+.main_menu .item:nth-child(4n+1) {
+  margin-left: 73px;
+}
+.main_menu .item:nth-child(4n+3) {
+  margin-left: 92px;
+
+}
+.main_menu .item:nth-child(4n+1),
+.main_menu .item:nth-child(4n+2) {
+  text-align: left;
+}
+.main_menu .item:nth-child(4n+3),
+.main_menu .item:nth-child(4n+4) {
+  text-align: right;
+}
+.main_menu .logo {
+  position: absolute;
+  top: -1px;
+  left: 50%;
+  order: 1;
+  transform: translateX(-50%)
+}
+
 .title_text {
+  position: relative;
   padding: 76px 370px 73px;
 }
+
+
 .promo,
 .promo_header,
 .feature,
@@ -399,7 +525,6 @@ a:active .logo {
   align-items: center;
 }
 .promo_header {
-  justify-content: space-around;
   min-height: 215px;
 }
 .article_header,
@@ -432,3 +557,129 @@ a:active .logo {
 .developed {
   width: 400px;
 }
+
+/* Отели */
+.filter {
+  margin-bottom: 30px;
+}
+.hotel_filter {
+  display: flex;
+  justify-content: space-between;
+}
+.checkbox_block {
+  display: flex;
+}
+.filter_checkbox {
+  padding: 0;
+  margin: 0;
+  margin-left: 70px;
+  width: 240px;
+}
+.filter_checkbox:nth-of-type(2) {
+  margin-left: 14px;
+}
+.filter_checkbox legend {
+  text-align: left;
+  padding-top: 28px;
+  margin-bottom: 25px;
+}
+.filter_checkbox li {
+  padding-left: 20px;
+  margin-bottom: 24px;
+}
+.filter_checkbox li:last-of-type {
+  margin-bottom: 0;
+}
+.filter_checkbox ul {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 31px;
+}
+.checkbox_block label {
+  padding: 0;
+  margin: 0;
+}
+
+
+/* сортировка */
+.filter_result {
+  display: flex;
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 30px;
+}
+.sort_block {
+  flex-grow: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.result_block {
+  align-items: flex-end;
+  display: flex;
+}
+.result,
+.sort {
+  display: inline-block;
+  vertical-align: bottom;
+}
+.result {
+  padding-left: 72px;
+}
+.sort {
+  padding-bottom: 2px;
+  padding-left: 48px;
+}
+.sort_by_type,
+.sort_by_direction {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.sort_by_type li{
+  padding-bottom: 1px;
+  padding-left: 33px;
+}
+.sort_by_type li:first-child {
+  padding-left: 40px;
+}
+.arrow_button {
+  position: relative;
+  padding-left: 15px;
+  padding-right: 8px;
+}
+.arrow_button::before{
+  content: "";
+  display: block;
+  position: absolute;
+  top: 3px;
+  right: 73px;
+  width: 11px;
+  height: 11px;
+  background-repeat: no-repeat;
+  background-size: 11px 11px;
+}
+.up.arrow_button::before{
+  background-image: url(../img/icon/icon-up-dir-gray.svg);
+}
+.down.arrow_button::before{
+  background-image: url(../img/icon/icon-down-dir-gray.svg);
+}
+.up.arrow_button:hover::before,
+.up.arrow_button:focus::before{
+  background-image: url(../img/icon/icon-up-dir.svg);
+}
+.down.arrow_button:hover::before,
+.down.arrow_button:focus::before{
+  background-image: url(../img/icon/icon-down-dir.svg);
+}
+.up.arrow_button:active::before{
+  background-image: url(../img/icon/icon-up-dir-blue.svg);
+}
+.down.arrow_button:active::before{
+  background-image: url(../img/icon/icon-down-dir-blue.svg);
+}
+.active.arrow_button::before {
+  background-image: url(../img/icon/icon-down-dir-blue.svg);
+}
+
+/*  */
