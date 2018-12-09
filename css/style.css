@@ -190,17 +190,28 @@ a {
 }
 /* Поиск по дате заезда  */
 .booking {
+  position: relative;
   background-color: #fff;
   text-align: center;
 }
 .booking_header h2 {
+  padding: 0;
+  margin: 50px auto 24px;
   font-size: 30px;
   line-height: 36px;
 }
 .booking_header p {
+  padding: 0;
+  margin: 0 auto 47px;
+  width: 450px;
   line-height: 24px;
 }
-.form_label.button {
+.form_label_button {
+  padding: 30px 140px;
+  margin: 0;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
@@ -208,28 +219,95 @@ a {
   background-color: #766357;
   color: #fff;
 }
-.form_label.button:hover,
-.form_label.button:focus {
+.form_label_button:hover,
+.form_label_button:focus {
   background-color: #604e43;
 }
-.form_label.button:active {
+.form_label_button:active {
   color: #928a85;
   background-color: #503e33;
 }
 
 /* Форма поиска по дате */
-.hotel_find fieldset {
-  border: none;
+.hotel_find  {
+  position: absolute;
+  top: 292px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 568px;
+  box-sizing: border-box;
+
+  background-color: #fff;
+}
+
+.full_width {
+  padding: 0;
+  width: 472px;
+  margin-left: 55px;
+  margin-top: 54px;
+  margin-bottom: 29px;
+  box-sizing: border-box;
+}
+.full_width label {
+  float: left;
+  display: block;
+  padding: 6px 0;
+  padding-right: 20px;
+}
+.full_width:nth-of-type(2) {
+  margin-top: 0;
+}
+.full_width input[type="text"] {
+  padding: 6px 0;
+  padding-left: 10px;
+  box-sizing: border-box;
+  width: 346px;
+}
+
+.half_width {
+  text-align: left;
+  padding: 0;
+  margin-left: 50px;
+  width: 231px;
+  font-size: 0;
+  box-sizing: border-box;
+}
+.half_width:last-of-type {
+  margin-left: 50px;
+}
+
+.half_width label {
+  padding-right: 40px;
+  padding-left: 4px;
+  display: inline-block;
+  font-size: 14px;
+  text-align: left;
+  vertical-align: middle;
+}
+.half_width:last-of-type label {
+  padding-right: 25px;
+}
+.quantity {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  margin: 0;
+  padding: 7px 8px;
+  width: 30px;
 }
 .hotel_find label {
   line-height: 26px;
   font-weight: 700;
-
   color: #000;
+
 }
 .hotel_find input[type="text"],
 .hotel_find input[type="button"] {
+  font-family: inherit;
   line-height: 26px;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
 
   background: #f2f2f2;
   border: none;
@@ -252,10 +330,15 @@ a {
 }
 /* Кнопки в форме поиска по дате */
 .form_button {
+  display: inline-block;
+  padding: 12px 14px;
+  margin: 0;
   font-size: 14px;
   font-weight: 700;
-
+  background-color: #f2f2f2;
   color: #a9a9a9;
+  border: none;
+  vertical-align: middle;
 }
 .form_button:hover,
 .form_button:focus {
@@ -264,7 +347,34 @@ a {
 .form_button:active {
   color: #81b3d2;
 }
+.calendar {
+  position: relative;
+  background: transparent;
+  border: none;
+  font-size: 0;
+  outline: none;
+}
+.calendar::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: -32px;
+  width: 22px;
+  height: 22px;
+  background-image: url(../img/icon/calendar_gray.svg);
+}
+.calendar:hover::before,
+.calendar:focus::before {
+  background-image: url(../img/icon/calendar.svg);
+}
+.calendar:active::before {
+  background-image: url(../img/icon/calendar_blue.svg);
+}
 .find_button {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 53px auto;
+  padding: 17px 196px;
   font-size: 21px;
   font-weight: 700;
   text-transform: uppercase;
@@ -637,10 +747,6 @@ a:active .logo {
   width: 400px;
 }
 
-.hotel_find,
-.form_label.button {
-  width: 568px;
-}
 .page_footer {
   display: flex;
   justify-content: space-between;
