@@ -55,6 +55,7 @@ a {
   background-image: url("../img/background/index_background.jpg");
   background-repeat: no-repeat;
   background-size: 1200px 508px;
+
 }
 .promo {
   background-color: #fff;
@@ -632,29 +633,59 @@ a {
 /* Кнопки социальных сетей */
 .social_buttons {
   list-style: none;
+  padding: 0;
+  padding-right: 3px;
+  margin: 0 auto;
+  margin-top: 11px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 150px;
 }
-.social_buttons a {
-  background: #81b3d2;
-  color: #fff;
+.social_link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 48px;
+  background-color: #81b3d2;
+  fill: #fff;
+
 }
-.social_buttons a:hover,
-.social_buttons a:focus {
+.social_link:hover,
+.social_link:focus {
   background-color: #669ec0;
 }
-.social_buttons a:active {
+.social_link:active {
   background-color: #5496bd;
-  color: #88b6d1;
+}
+.social_link:active path{
+  fill: #88b6d1;
 }
 /* Сведения о разработчике */
-.developed p {
-  line-height: 26px;
-  vertical-align: middle;
+.developed {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-a:hover .logo,
-a:focus .logo {
+.developed_text {
+  display: block;
+  float: left;
+  padding: 8px 0;
+  margin-right: 8px;
+  line-height: 26px;
+  align-self: center;
+}
+.dev_logo {
+  align-self: flex-start;
+}
+a:hover .dev_logo,
+a:focus .dev_logo {
   fill: #81b3d2;
 }
-a:active .logo {
+a:active .dev_logo {
   fill: #bdbbbc;
 }
 
@@ -664,6 +695,7 @@ a:active .logo {
 .main_wrapper {
   width: 1200px;
   margin: 0 auto;
+  box-shadow: 0 0 15px 5px #dbdbdb;
 }
 .page_main::before {
   position: absolute;
@@ -749,7 +781,9 @@ a:active .logo {
 
 .page_footer {
   display: flex;
-  justify-content: space-between;
+  padding-top: 5px;
+  padding-bottom: 36px;
+  background-color: #fdfdfc;
 }
 .hashtag,
 .social,
