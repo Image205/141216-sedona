@@ -31,22 +31,22 @@
             <fieldset class="filter_checkbox">
               <legend>Инфраструктура:</legend>
               <ul>
-                <li><label><input class="form_checkbox" type="checkbox" name="swimming_pool" checked> Бассейн</label></li>
-                <li><label><input class="form_checkbox" type="checkbox" name="parking"> Парковка</label></li>
-                <li><label><input class="form_checkbox" type="checkbox" name="wifi"> Wi-Fi</label></li>
+                <li><label><input class="form_checkbox visually_hidden" type="checkbox" name="swimming_pool" checked><span class="checkbox_indicator"></span>Бассейн</label></li>
+                <li><label><input class="form_checkbox visually_hidden" type="checkbox" name="parking"><span class="checkbox_indicator"></span>Парковка</label></li>
+                <li><label><input class="form_checkbox visually_hidden" type="checkbox" name="wifi"><span class="checkbox_indicator"></span>Wi-Fi</label></li>
               </ul>
             </fieldset>
             <fieldset class="filter_checkbox">
               <legend>Тип жилья:</legend>
               <ul>
-                <li><label><input class="form_checkbox" type="checkbox" name="hotel" checked> Гостиница</label></li>
-                <li><label><input class="form_checkbox" type="checkbox" name="motel" checked> Мотель</label></li>
-                <li><label><input class="form_checkbox" type="checkbox" name="apts" checked> Апартаменты</label></li>
+                <li><label><input class="form_checkbox visually_hidden" type="checkbox" name="hotel" checked><span class="checkbox_indicator"></span>Гостиница</label></li>
+                <li><label><input class="form_checkbox visually_hidden" type="checkbox" name="motel" checked><span class="checkbox_indicator"></span>Мотель</label></li>
+                <li><label><input class="form_checkbox visually_hidden" type="checkbox" name="apts" checked><span class="checkbox_indicator"></span>Апартаменты</label></li>
               </ul>
             </fieldset>
           </div>
           <fieldset class="price_per_day">
-            <legend>Стоимость в сутки(Р):</legend>
+            <legend>Стоимость в сутки (Р):</legend>
             <div class="price_container">
               <input class="price_window" type="text" name="min_price" value="" placeholder="От 0" aria-label="Фильтр по цене в сутки">
               <input class="price_window" type="text" name="max_price" value="" placeholder="До 3000" aria-label="Фильтр по цене в сутки">
@@ -81,55 +81,76 @@
       </section>
       <section class="hotel_container">
         <article class="hotel_item">
-          <header class="hotel_header">
-            <a href="#">
-              <h2>Amara resort&spa</h2>
-            </a>
-          </header>
-          <a href="#"><img class="hotel_miniature" src="img/content/hotels_amara.jpg" width="135" height="90" alt="Amara resort&spa"></a>
-          <!-- ссылка ведет на полную страницу данного отеля -->
-          <span class="apts_type">Гостиница</span>
-          <a class="view_more button" href="#">Подробнее</a>
-          <span class="price">От 4000р</span>
-          <a class="reserving button" href="#">Забронировать</a>
+          <a href="#"><img class="hotel_miniature" src="img/content/hotels_amara.jpg" width="135" height="90" alt="Amara resort & spa"></a>
+          <div class="hotel_info_block">
+            <header class="hotel_header">
+              <a href="#">
+                <h2>Amara resort & spa</h2>
+              </a>
+            </header>
+            <div class="columns">
+              <div class="left_column">
+                <span class="apts_type">Гостиница</span>
+                <a class="view_more button" href="#">Подробнее</a>
+              </div>
+              <div class="right_column">
+                <span class="price">От 4000 р.</span>
+                <a class="reserving button" href="#">Забронировать</a>
+              </div>
+            </div>
+          </div>
           <p class="rate">
-            <span class="stars" aria-label="Количество звезд">4</span>
+            <span class="stars" aria-label="Количество звезд"><span class="visually_hidden">4</span></span>
             <span class="rating">Рейтинг: 8.5</span>
           </p>
         </article>
 
         <article class="hotel_item">
-          <header class="hotel_header">
-            <a href="#">
-              <h2>Desert Quail Inn</h2>
-            </a>
-          </header>
           <a href="#"><img class="hotel_miniature" src="img/content/hotels_desert.jpg" width="135" height="90" alt="Desert Quail Inn"></a>
-          <!-- ссылка ведет на полную страницу данного отеля -->
-          <span class="apts_type">Мотель</span>
-          <a class="view_more button" href="#">Подробнее</a>
-          <span class="price">От 3000р</span>
-          <a class="reserving button" href="#">Забронировать</a>
+          <div class="hotel_info_block">
+            <header class="hotel_header">
+              <a href="#">
+                <h2>Desert Quail Inn</h2>
+              </a>
+            </header>
+            <div class="columns">
+              <div class="left_column">
+                <span class="apts_type">Мотель</span>
+                <a class="view_more button" href="#">Подробнее</a>
+              </div>
+              <div class="right_column">
+                <span class="price">От 3000 р.</span>
+                <a class="reserving button" href="#">Забронировать</a>
+              </div>
+            </div>
+          </div>
           <p class="rate">
-            <span class="stars" aria-label="Количество звезд">3</span>
+            <span class="stars" aria-label="Количество звезд"><span class="visually_hidden">3</span></span>
             <span class="rating">Рейтинг: 8.9</span>
           </p>
         </article>
 
         <article class="hotel_item">
-          <header class="hotel_header">
-            <a href="#">
-              <h2>Villas at Poco Diablo</h2>
-            </a>
-          </header>
           <a href="#"><img class="hotel_miniature" src="img/content/hotels_villas.jpg" width="135" height="90" alt="Villas at Poco Diablo"></a>
-          <!-- ссылка ведет на полную страницу данного отеля -->
-          <span class="apts_type">Апартаменты</span>
-          <a class="view_more button" href="#">Подробнее</a>
-          <span class="price">От 2000р</span>
-          <a class="reserving button" href="#">Забронировать</a>
+          <div class="hotel_info_block">
+            <header class="hotel_header">
+              <a href="#">
+                <h2>Villas at Poco Diablo</h2>
+              </a>
+            </header>
+            <div class="columns">
+              <div class="left_column">
+                <span class="apts_type">Апартаменты</span>
+                <a class="view_more button" href="#">Подробнее</a>
+              </div>
+              <div class="right_column">
+                <span class="price">От 2000 р.</span>
+                <a class="reserving button" href="#">Забронировать</a>
+              </div>
+            </div>
+          </div>
           <p class="rate">
-            <span class="stars" aria-label="Количество звезд">2</span>
+            <span class="stars" aria-label="Количество звезд"><span class="visually_hidden">2</span></span>
             <span class="rating">Рейтинг: 9.2</span>
           </p>
         </article>
@@ -175,7 +196,7 @@
         <h2 class="visually_hidden">Информация о разработчике</h2>
         <p>
           <span class="developed_text">Website by</span>
-          <a href="https://htmlacademy.ru/intensive/htmlcss" area-label="HTML Academy">
+          <a href="https://htmlacademy.ru/intensive/htmlcss" aria-label="HTML Academy">
             <svg class="dev_logo" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108.08 36.85"
               width="115" height="41">
               <title>HTML Academy</title>
