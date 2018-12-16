@@ -1043,14 +1043,25 @@ a {
 }
 
 /* Футер */
-
+.footer_main {
+  position: relative;
+}
+.map {
+  display: block;
+  position: absolute;
+  top: -473px;
+  z-index: -1;
+}
 .page_footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  z-index: 1;
+  margin-top: 473px;
   padding-top: 25px;
   padding-bottom: 36px;
   background-color: #fdfdfc;
+  opacity: 0.9;
   text-align: center;
   color: #000;
 }
@@ -1060,6 +1071,7 @@ a {
   width: 400px;
 }
 .hashtag p {
+  margin-top: 0;
   font-size: 21px;
   font-weight: 700;
   line-height: 26px;
