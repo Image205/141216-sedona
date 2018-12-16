@@ -367,7 +367,9 @@ a {
 
   background-color: #fff;
 }
-
+.hotel_find_hide {
+  display: none;
+}
 .full_width {
   padding: 0;
   width: 472px;
@@ -1049,15 +1051,17 @@ a {
 .map {
   display: block;
   position: absolute;
-  top: -473px;
+  top: 0px;
   z-index: -1;
+}
+.map_google {
+  display: block;
 }
 .page_footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   z-index: 1;
-  margin-top: 473px;
   padding-top: 25px;
   padding-bottom: 36px;
   background-color: #fdfdfc;
