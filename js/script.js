@@ -4,9 +4,11 @@ var arrive = document.querySelector("[name=arrive]");
 var departure = document.querySelector("[name=departure]");
 var adult = document.querySelector("[name=adult");
 
+hotel_form.classList.remove("form_no_JS");
+
 modal_button.addEventListener("click", function (evt) {
   evt.preventDefault();
-  hotel_form.classList.toggle("hotel_find_hide");
+  hotel_form.classList.toggle("form_no_JS");
   arrive.focus();
   arrive.classList.remove("error");
   departure.classList.remove("error");

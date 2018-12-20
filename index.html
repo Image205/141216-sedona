@@ -14,18 +14,20 @@
     <header class="page_header">
       <nav class="main_menu">
         <ul class="list">
-          <li class="item"><a class="nav-button" href="/info.html">Информация</a></li>
-          <li class="item"><a class="nav-button" href="/media.html">Фото и видео</a></li>
-          <li class="item"><a class="nav-button" href="/map.html">Карта штата</a></li>
-          <li class="item"><a class="nav-button" href="/hotels.html">Гостиницы</a></li>
+          <li class="item"><a class="nav-button" href="info.html">Информация</a></li>
+          <li class="item"><a class="nav-button" href="media.html">Фото и видео</a></li>
+          <li class="item"><a class="nav-button" href="map.html">Карта штата</a></li>
+          <li class="item"><a class="nav-button" href="hotels.html">Гостиницы</a></li>
         </ul>
         <a class="logo"><img src="img/content/logo-sedona.svg" width="140" height="72" alt="Логотип города Седона"></a>
       </nav>
       <h1 class="visually_hidden">Добро пожаловать в великолепную Седону</h1>
     </header>
     <main class="page_main">
-      <img class="title_text" src="img/content/intro-welcome.svg" alt="Welcome to the gorgeous Sedona" width="459"
-        height="353">
+      <div class="main_background">
+        <img class="title_text" src="img/content/intro-welcome.svg" alt="Welcome to the gorgeous Sedona" width="459"
+          height="353">
+      </div>
       <section class="promo">
         <header class="promo_header">
           <h2>Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
@@ -88,8 +90,8 @@
           <h2>Заинтересовались?</h2>
           <p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
         </header>
-        <a href="#" class="form_label_button">Поиск гостиницы в Седоне</a>
-        <form class="hotel_find hotel_find_hide shrink" action="https://echo.htmlacademy.ru" method="POST">
+        <a href="form.html" class="form_label_button">Поиск гостиницы в Седоне</a>
+        <form class="hotel_find form_no_JS shrink" action="https://echo.htmlacademy.ru" method="POST">
           <p class="full_width">
             <label for="arrive">Дата заезда:</label>
             <input class="date_input" type="text" name="arrive" id="arrive" placeholder="24 апреля 2017">
@@ -175,7 +177,7 @@
       </div>
     </footer>
   </div>
-  <script src="/js/script.min.js"></script>
+  <script src="js/script.min.js"></script>
 </body>
 
 </html>
