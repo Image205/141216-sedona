@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
 
-  font-family: PT Sans, Tahoma, sans-serif;
+  font-family: "PT Sans", Tahoma, sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
@@ -11,20 +11,21 @@ body {
 
   background-color: #f2f2f2;
 }
-
 a {
   text-decoration: none;
 }
 .visually_hidden {
   position: absolute;
-  margin: -1px;
 
-  clip: rect(0 0 0 0);
-  
+  margin: -1px;
   width: 1px;
   height: 1px;
+
+  clip: rect(0 0 0 0);
 }
+
 /*   Хедер    */
+
 .page_header {
   z-index: 3;
 
@@ -54,7 +55,6 @@ a {
 .item .active:focus {
   color: #766357;
 }
-
 .main_menu .list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -69,7 +69,6 @@ a {
 .main_menu .item {
   padding-top: 14px;
   padding-bottom: 15px;
-
   width: 240px;
 }
 .main_menu .item:nth-child(4n+1) {
@@ -77,7 +76,6 @@ a {
 }
 .main_menu .item:nth-child(4n+3) {
   margin-left: 92px;
-
 }
 .main_menu .item:nth-child(4n+1),
 .main_menu .item:nth-child(4n+2) {
@@ -92,6 +90,7 @@ a {
   position: absolute;
   top: -1px;
   left: calc(50% - 70px);
+
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
@@ -110,18 +109,27 @@ a {
 .main_background {
   position: relative;
   z-index: 1;
+  
+  width: 1200px;
+  height: 510px;
 
   background-color: #55728e;
-  background-image: url("../img/background/index_background.jpg");
+  background-image:
+    url("../img/content/intro-welcome.svg"),
+    url("../img/background/index_background.jpg");
   background-repeat: no-repeat;
-  background-size: 1200px 510px;
-
+  background-size:
+    459px 353px,
+    1200px 510px;
+  background-position:
+    calc(50% - 1px) calc(50% - 2px),
+    0 0;
 }
 .main_background::after {
   position: absolute;
   bottom: -2px;
+  
   content: "";
-
   display: block;
   width: 1200px;
   height: 60px;
@@ -130,16 +138,11 @@ a {
   background-size: 1200px 60px;
   background-repeat: no-repeat;
 }
-.title_text {
-  position: relative;
-  padding: 75px 370px 73px;
-}
 
 /* Промо-блок */
 
 .promo,
 .promo_header,
-.feature,
 .booking,
 .booking_header {
   display: -webkit-box;
@@ -161,10 +164,10 @@ a {
   line-height: 26px;
   min-height: 215px;
 }
-.promo_header h2 {
+.promo_header p:first-child {
   padding: 0;
   margin: 0;
-  margin-top: 61px;
+  margin-top: 59px;
   margin-bottom: 27px;
 
   font-size: 21px;
@@ -181,121 +184,72 @@ a {
 
 /* Основной блок преимуществ */
 
-.article_header,
+.feature_list_ordered,
 .feature_list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin: 0;
+  flex-wrap: wrap;
+  width: 1200px;
   padding: 0;
-  min-height: 256px;
+  margin: 0;
+
+  list-style: none;
 }
-.article_header {
-  color: #fff;
-  background-color: #81b3d2;
-}
-.header_block {
-  
-  display: -webkit-box;
-  display: -ms-flexbox;
+.feature_item {
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   width: 400px;
 }
-.feature:nth-of-type(1) img {
-  background-color: #5f5646;
-}
-.feature:nth-of-type(2) img {
-  background-color: #8e6d5c;
-  -webkit-box-ordinal-group:0;
-      -ms-flex-order:-1;
-          order:-1;
-}
-.feature:first-of-type .feature_list {
-  min-height: 330px;
-}
-.feature h3,
-.feature p {
-  text-align: center;
-}
-.feature h3 {
+.feature_item h3 {
   padding: 0;
-  margin-top: 47px;
-  margin-bottom: 24px;
   width: 160px;
 
   font-size: 21px;
   line-height: 21px;
   font-weight: 700;
 }
-.feature p {
-  padding: 0;
-  margin: 0 auto 20px;
-  width: 280px;
-}
-.last_item p {
-  width: 250px;
-}
-.feature ul {
+.feature_item p {
   padding: 0;
   margin: 0;
-
-  list-style: none;
+  width: 280px;
 }
-.feature li {
-  
-  display: -webkit-box;
-  display: -ms-flexbox;
+.header_block {
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 400px;
-}
-.feature_item {
-  width: 400px;
+  padding: 0;
+  margin: 0;
+  color: #fff;
+
+  background-color: #81b3d2;
 }
 .header_block h3 {
   padding: 0;
-  margin-top: 47px;
-  margin-bottom: 24px;
   
   width: 160px;
 }
 .header_block p {
   padding: 0;
-  margin: 0 auto 20px;
+  margin: 0 auto;
   width: 304px;
 }
-.feature_list li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+.header_block:nth-of-type(1) img {
+  background-color: #5f5646;
+}
+.header_block:nth-of-type(2) img {
+  background-color: #8e6d5c;
+}
+.feature_column_text {
+  width: 400px;
 }
 .with_icon h3 {
   position: relative;
+
   padding: 0;
   margin-top: 161px;
   margin-bottom: 24px;
 }
 .with_icon h3::before {
   position: absolute;
+
   content: "";
   
   background-repeat: no-repeat;
@@ -334,11 +288,9 @@ a {
   padding: 0;
   margin: 0;
   width: 290px;
-  -ms-flex-item-align: center;
-      align-self: center
 }
-.feature:nth-of-type(2) ul {
-  background-color: #eee;
+.last_blocks {
+  background-color: #eeeeee;
 }
 
 /* Поиск по дате заезда  */
@@ -392,7 +344,8 @@ a {
 }
 
 /* Форма поиска по дате */
-.hotel_find  {
+
+.hotel_find {
   position: absolute;
   z-index: -1;
   top: 292px;
@@ -447,12 +400,10 @@ a {
 
   text-align: left;
   font-size: 0;
-
 }
 .half_width:last-of-type {
   margin-left: 50px;
 }
-
 .half_width label {
   display: inline-block;
   padding-right: 40px;
@@ -478,7 +429,6 @@ a {
   line-height: 26px;
   font-weight: 700;
   color: #000;
-
 }
 .hotel_find input[type="text"],
 .hotel_find input[type="button"] {
@@ -521,7 +471,9 @@ a {
   
   color: #000;
 }
+
 /* Кнопки в форме поиска по дате */
+
 .form_button {
   display: inline-block;
   padding: 12px 14px;
@@ -555,8 +507,8 @@ a {
   position: absolute;
   top: -15px;
   left: -32px;
+  
   content: "";
-
   width: 22px;
   height: 22px;
 
@@ -1145,8 +1097,7 @@ a {
   background-size: 24px 100%;
   background-image: url("../img/icon/star.svg");
   background-repeat: repeat-x;
-
-} 
+}
 .hotel_item:nth-last-of-type(2) .stars {
   width: 66px; 
 }
@@ -1155,6 +1106,7 @@ a {
 }
 
 /* Футер */
+
 .footer_main {
   position: relative;
 }
@@ -1211,9 +1163,8 @@ a {
   padding-right: 3px;
   margin: 0 auto;
   margin-top: 11px;
-
-
   width: 150px;
+
   list-style: none;
 }
 .social_link {
@@ -1231,7 +1182,6 @@ a {
 
   background-color: #81b3d2;
   fill: #fff;
-
 }
 .social_link:hover,
 .social_link:focus {
@@ -1247,7 +1197,6 @@ a {
 /* Сведения о разработчике */
 
 .developed {
-
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1283,35 +1232,34 @@ a:active .dev_logo {
 }
 
 /* анимации */
-@-webkit-keyframes error {
-  0% {background-color: rgba(255, 0, 0, 0.5)};
-  50% {background-color: rgb(158, 10, 10)};
-  100% {background-color: rgba(255, 0, 0, 0.952)};
 
+@-webkit-keyframes error {
+  0% {background-color: rgba(248, 248, 248, 0.5)}
+  50% {background-color: rgb(236, 19, 19)}
+  100% {background-color: rgba(221, 167, 167, 0.952)}
 }
 @keyframes error {
-  0% {background-color: rgba(255, 0, 0, 0.5)};
-  50% {background-color: rgb(158, 10, 10)};
-  100% {background-color: rgba(255, 0, 0, 0.952)};
-
+  0% {background-color: rgba(248, 248, 248, 0.5)}
+  50% {background-color: rgb(236, 19, 19)}
+  100% {background-color: rgba(221, 167, 167, 0.952)}
 }
 @-webkit-keyframes shrink {
-  0% {-webkit-transform: scale(0, 1);transform: scale(0, 1);}
-  95% {-webkit-transform: scale(1.01, 1);transform: scale(1.01, 1);}
-  100% {-webkit-transform: scale(1, 1);transform: scale(1, 1);}
+  0% {-webkit-transform: scale(0, 1);transform: scale(0, 1)}
+  95% {-webkit-transform: scale(1.01, 1);transform: scale(1.01, 1)}
+  100% {-webkit-transform: scale(1, 1);transform: scale(1, 1)}
 }
 @keyframes shrink {
-  0% {-webkit-transform: scale(0, 1);transform: scale(0, 1);}
-  95% {-webkit-transform: scale(1.01, 1);transform: scale(1.01, 1);}
-  100% {-webkit-transform: scale(1, 1);transform: scale(1, 1);}
+  0% {-webkit-transform: scale(0, 1);transform: scale(0, 1)}
+  95% {-webkit-transform: scale(1.01, 1);transform: scale(1.01, 1)}
+  100% {-webkit-transform: scale(1, 1);transform: scale(1, 1)}
 }
 @-webkit-keyframes shrink_reverse {
-  0% {-webkit-transform: scale(1, 1);transform: scale(1, 1);}
-  100% {-webkit-transform: scale(0, 1);transform: scale(0, 1);}
+  0% {-webkit-transform: scale(1, 1);transform: scale(1, 1)}
+  100% {-webkit-transform: scale(0, 1);transform: scale(0, 1)}
 }
 @keyframes shrink_reverse {
-  0% {-webkit-transform: scale(1, 1);transform: scale(1, 1);}
-  100% {-webkit-transform: scale(0, 1);transform: scale(0, 1);}
+  0% {-webkit-transform: scale(1, 1);transform: scale(1, 1)}
+  100% {-webkit-transform: scale(0, 1);transform: scale(0, 1)}
 }
 .shrink {
   -webkit-animation-name: shrink;

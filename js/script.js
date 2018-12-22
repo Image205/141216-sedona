@@ -25,7 +25,5 @@ hotel_form.addEventListener("submit", function (evt) {
       arrive.classList.add("error");
       departure.classList.add("error");
       adult.classList.add("error");
- 
-
-  };
+  }
 });
