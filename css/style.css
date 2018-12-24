@@ -61,8 +61,8 @@ a {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding: 0;
   margin: 0;
+  padding: 0;
 
   list-style: none;
 }
@@ -165,29 +165,31 @@ a {
   min-height: 215px;
 }
 .promo_header p:first-child {
-  padding: 0;
   margin: 0;
   margin-top: 59px;
   margin-bottom: 27px;
+  padding: 0;
+  width: 460px;
 
   font-size: 21px;
   font-weight: 700;
   color: #000;
-
-  width: 460px;
 }
 .promo_header p {
-  padding: 0;
   margin: 0;
   margin-bottom: 51px;
+  padding: 0;
 }
 
 /* Основной блок преимуществ */
 
 .feature_list_ordered,
 .feature_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   width: 1200px;
   padding: 0;
   margin: 0;
@@ -195,9 +197,16 @@ a {
   list-style: none;
 }
 .feature_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 400px;
 }
 .feature_item h3 {
@@ -207,45 +216,63 @@ a {
   font-size: 21px;
   line-height: 21px;
   font-weight: 700;
+
+  text-align: center;
 }
 .feature_item p {
-  padding: 0;
   margin: 0;
+  padding: 0;
   width: 280px;
+
+  text-align: center;
 }
 .header_block {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  
   color: #fff;
 
   background-color: #81b3d2;
 }
-.header_block h3 {
-  padding: 0;
-  
-  width: 160px;
-}
-.header_block p {
-  padding: 0;
-  margin: 0 auto;
-  width: 304px;
-}
-.header_block:nth-of-type(1) img {
-  background-color: #5f5646;
-}
-.header_block:nth-of-type(2) img {
-  background-color: #8e6d5c;
-}
 .feature_column_text {
   width: 400px;
+}
+.feature_column_text h3 {
+  margin-top: 47px;
+  margin-bottom: 24px;
+  padding: 0;
+  width: 160px;
+
+  text-align: center;
+}
+.feature_column_text p {
+  margin: 0 auto;
+  padding-bottom: 21px;
+  width: 304px;
+  
+  text-align: center;
+}
+.feature_column_decor {
+  width: 800px;
+}
+.feature_decor {
+  display: block;
+}
+.feature_decor:nth-of-type(1) {
+  background-color: #5f5646;
+}
+.feature_decor:nth-of-type(2) {
+  background-color: #8e6d5c;
 }
 .with_icon h3 {
   position: relative;
 
-  padding: 0;
   margin-top: 161px;
   margin-bottom: 24px;
+  padding: 0;
 }
 .with_icon h3::before {
   position: absolute;
@@ -285,14 +312,28 @@ a {
   background-size: 64px 76px;
 }
 .with_icon p {
-  padding: 0;
   margin: 0;
+  padding-bottom: 82px;
   width: 290px;
 }
 .last_blocks {
   background-color: #eeeeee;
 }
-
+.last_blocks h3 {
+  margin: 0;
+  padding-top: 47px;
+  padding-bottom: 24px;
+}
+.last_blocks p {
+  margin: 0;
+  padding-bottom: 21px;
+}
+.last_blocks:last-child {
+  padding-bottom: 38px;
+}
+.last_blocks:last-of-type p:last-of-type {
+  width: 255px;
+} 
 /* Поиск по дате заезда  */
 
 .booking {
@@ -307,23 +348,23 @@ a {
   z-index: 3;
 }
 .booking_header h2 {
-  padding: 0;
   margin: 50px auto 24px;
+  padding: 0;
 
   font-size: 30px;
   line-height: 36px;
 }
 .booking_header p {
-  padding: 0;
   margin: 0 auto 47px;
+  padding: 0;
   width: 450px;
 
   line-height: 24px;
 }
 .form_label_button {
   display: inline-block;
-  padding: 30px 140px;
   margin: 0;
+  padding: 30px 140px;
   
   vertical-align: middle;
   text-align: center;
@@ -349,6 +390,8 @@ a {
   position: absolute;
   z-index: -1;
   top: 292px;
+  left: calc(50% - 284px);
+
   display: none;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -366,10 +409,10 @@ a {
 .full_width {
   z-index: -1;
 
-  padding: 0;
   margin-left: 55px;
   margin-top: 54px;
   margin-bottom: 29px;
+  padding: 0;
   width: 472px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -392,8 +435,8 @@ a {
 }
 
 .half_width {
-  padding: 0;
   margin-left: 50px;
+  padding: 0;
   width: 231px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -476,8 +519,8 @@ a {
 
 .form_button {
   display: inline-block;
-  padding: 12px 14px;
   margin: 0;
+  padding: 12px 14px;
 
   font-size: 14px;
   font-weight: 700;
@@ -530,9 +573,9 @@ a {
   vertical-align: middle;
   font-weight: 700;
   text-transform: uppercase;
+  color: #ffffff;
 
   border: none;
-  color: #ffffff;
   background-color: #81b3d2;
 }
 .find_button:hover,
@@ -585,34 +628,34 @@ a {
   display: flex;
 }
 .checkbox_block label {
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 .filter_checkbox {
-  padding: 0;
   margin: 0;
   margin-left: 70px;
+  padding: 0;
   width: 240px;
 }
 .filter_checkbox:nth-of-type(2) {
   margin-left: 14px;
 }
 .filter_checkbox legend {
-  padding-top: 28px;
   margin-bottom: 25px;
+  padding-top: 28px;
 
   text-align: left;
 }
 .filter_checkbox ul {
-  padding: 0;
   margin: 0;
   margin-bottom: 31px;
+  padding: 0;
 
   list-style: none;
 }
 .filter_checkbox li {
-  padding-left: 42px;
   margin-bottom: 25px;
+  padding-left: 42px;
 
   text-align: left;
 }
@@ -640,6 +683,12 @@ a {
   background-image: url("../img/icon/checkbox-off.svg");
   background-repeat: no-repeat;
   background-size: 27px 23px;
+}
+.filter_checkbox input[type="checkbox"]:focus + .checkbox_indicator {
+  outline-color: #81b3d2; 
+outline-offset: -2px;
+outline-style: auto;
+outline-width: 5px;
 }
 .filter_checkbox input[type="checkbox"]:disabled + .checkbox_indicator {
   position: absolute;
@@ -842,6 +891,7 @@ a {
 .result,
 .sort {
   display: inline-block;
+
   vertical-align: bottom;
 }
 .result {
@@ -909,6 +959,9 @@ a {
   padding-left: 15px;
   padding-right: 8px;
 }
+.arrow_button:focus {
+  outline: none;
+}
 .arrow_button::before {
   position: absolute;
   top: 3px;
@@ -935,6 +988,13 @@ a {
 .down.arrow_button:hover::before,
 .down.arrow_button:focus::before {
   background-image: url("../img/icon/icon-down-dir.svg");
+}
+.up.arrow_button:focus::before,
+.down.arrow_button:focus::before {
+  outline-color: rgb(77, 144, 254);
+  outline-offset: -2px;
+  outline-style: auto;
+  outline-width: 5px;
 }
 .up.arrow_button:active::before {
   background-image: url("../img/icon/icon-up-dir-blue.svg");
@@ -969,7 +1029,6 @@ a {
   display: -ms-flexbox;
   display: flex;
   padding: 30px 72px 24px;
-
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 
@@ -1076,12 +1135,12 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: 0;
-  padding: 0;
   margin-left: auto;
+  padding: 0;
 }
 .rating {
-  padding: 3px 14px;
   margin-bottom: 7px;
+  padding: 3px 14px;
 
   color: #666666;
 
@@ -1159,10 +1218,10 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 0;
-  padding-right: 3px;
   margin: 0 auto;
   margin-top: 11px;
+  padding: 0;
+  padding-right: 3px;
   width: 150px;
 
   list-style: none;
@@ -1206,14 +1265,15 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0;
   margin: 0;
+  padding: 0;
+
 }
 .developed_text {
   display: block;
   float: left;
-  padding: 8px 0;
   margin-right: 8px;
+  padding: 8px 0;
   -ms-flex-item-align: center;
       align-self: center;
 
