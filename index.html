@@ -6,7 +6,7 @@
   <title>HTML Academy: Седона</title>
   <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
   <link href="css/normalize.min.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -92,28 +92,28 @@
         </header>
         <a href="form.html" class="form_label_button">Поиск гостиницы в Седоне</a>
         <form class="hotel_find form_no_JS shrink" action="https://echo.htmlacademy.ru" method="POST">
-          <p class="full_width">
+          <div class="full_width">
             <label for="arrive">Дата заезда:</label>
             <input class="date_input" type="text" name="arrive" id="arrive" placeholder="24 апреля 2017">
             <button class="calendar visually_hidden" type="button" name="cal_arrive">Календарь</button>
-          </p>
-          <p class="full_width">
+          </div>
+          <div class="full_width">
             <label for="departure">Дата выезда:</label>
             <input class="date_input" type="text" name="departure" id="departure" placeholder="4 июля 2017">
             <button class="calendar visually_hidden" type="button" name="cal_departure">Календарь</button>
-          </p>
-          <p class="half_width">
+          </div>
+          <div class="half_width">
             <label for="adult_quantity">Взрослые:</label>
             <button class="form_button minus_button" type="button" name="adult_minus">-</button>
             <input class="quantity" type="text" name="adult" id="adult_quantity" placeholder=" 2">
             <button class="form_button plus_button" type="button" name="adult_plus">+</button>
-          </p>
-          <p class="half_width">
+          </div>
+          <div class="half_width">
             <label for="child_quantity">Дети:</label>
             <button class="form_button minus_button" type="button" name="child_minus">-</button>
             <input class="quantity" type="text" name="child" id="child_quantity" placeholder=" 0">
             <button class="form_button plus_button" type="button" name="child_plus">+</button>
-          </p>
+          </div>
           <button class="find_button" type="submit">Найти</button>
         </form>
       </section>

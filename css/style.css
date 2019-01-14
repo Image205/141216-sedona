@@ -100,7 +100,6 @@ a {
 
 .main_wrapper {
   margin: 0 auto;
-
   width: 1200px;
 
   -webkit-box-shadow: 0 0 15px 5px #dbdbdb;
@@ -160,9 +159,10 @@ a {
   background-color: #fff;
 }
 .promo_header {
+  min-height: 215px;
+  
   text-align: center;
   line-height: 26px;
-  min-height: 215px;
 }
 .promo_header p:first-child {
   margin: 0;
@@ -216,7 +216,6 @@ a {
   font-size: 21px;
   line-height: 21px;
   font-weight: 700;
-
   text-align: center;
 }
 .feature_item p {
@@ -334,6 +333,7 @@ a {
 .last_blocks:last-of-type p:last-of-type {
   width: 255px;
 } 
+
 /* Поиск по дате заезда  */
 
 .booking {
@@ -371,9 +371,9 @@ a {
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
+  color: #fff;
 
   background-color: #766357;
-  color: #fff;
 }
 .form_label_button:hover,
 .form_label_button:focus {
@@ -381,6 +381,7 @@ a {
 }
 .form_label_button:active {
   color: #928a85;
+
   background-color: #503e33;
 }
 
@@ -416,12 +417,19 @@ a {
   width: 472px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+
+  font-size: 0px;
 }
 .full_width label {
   display: block;
   float: left;
   padding: 6px 0;
-  padding-right: 20px;
+  padding-left: 0px;
+  padding-right: 3px;
+  width: 100px;
+  
+  font-size: 14px;
+  text-align: left;
 }
 .full_width:nth-of-type(2) {
   margin-top: 0;
@@ -429,11 +437,12 @@ a {
 .full_width input[type="text"] {
   padding: 6px 0;
   padding-left: 10px;
+  margin-left: 6px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 346px;
+  height: 100%;
 }
-
 .half_width {
   margin-left: 50px;
   padding: 0;
@@ -464,6 +473,7 @@ a {
   margin: 0;
   padding: 7px 8px;
   width: 30px;
+  height: 66%;
 
   vertical-align: middle;
   text-align: center;
@@ -497,21 +507,18 @@ a {
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
-  
   color: #000;
 }
 .hotel_find input:-ms-input-placeholder {
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
-  
   color: #000;
 }
 .hotel_find input::placeholder {
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
-  
   color: #000;
 }
 
@@ -549,7 +556,7 @@ a {
 .calendar::before {
   position: absolute;
   top: -15px;
-  left: -32px;
+  left: -30px;
   
   content: "";
   width: 22px;
@@ -584,6 +591,7 @@ a {
 }
 .find_button:active {
   color: #94b9d2;
+
   background-color: #5496bd;
 }
 
@@ -604,9 +612,9 @@ a {
   background-size: 1200px 508px;
 }
 .filter fieldset {
-  border: none;
-
   text-align: center;
+  
+  border: none;
 }
 .filter legend {
   font-size: 16px;
@@ -684,11 +692,12 @@ a {
   background-repeat: no-repeat;
   background-size: 27px 23px;
 }
-.filter_checkbox input[type="checkbox"]:focus + .checkbox_indicator {
+.filter_checkbox input[type="checkbox"]:focus + .checkbox_indicator,
+.filter_checkbox input[type="checkbox"]:active + .checkbox_indicator {
   outline-color: #81b3d2; 
-outline-offset: -2px;
-outline-style: auto;
-outline-width: 5px;
+  outline-offset: -2px;
+  outline-style: auto;
+  outline-width: 5px;
 }
 .filter_checkbox input[type="checkbox"]:disabled + .checkbox_indicator {
   position: absolute;
@@ -737,25 +746,35 @@ outline-width: 5px;
   margin-bottom: 20px;
 
   font-size: 0;
+  text-align: left;
 
   border: 2px solid #fff;
   border-radius: 3px;
 }
-
-.price_window {
+.price_container label {
   display: inline-block;
-  padding: 0;
-  width: 150px;
-  height: 32px;  
+  width: 90px;
+  padding-left: 65px;
+  margin-top: 5px;
 
-  vertical-align: middle;
+  text-align: left;
+  vertical-align: top;
+  color: #fff;
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
-  text-align: center;
-  color: #fff;
+}
+.price_container label:last-of-type {
+  padding-left: 55px;
+}
+.price_window {
+  width: 50px;
+  margin: 0;
 
-  background-color: transparent;
+  color: inherit;
+  font: inherit;
+
+  background: none;
   border: none;
 }
 .price_container::after {
@@ -768,30 +787,6 @@ outline-width: 5px;
   height: 22px;
 
   background: #fff;
-}
-.price_window:last-of-type {
-  margin-left: 8px;
-}
-.price_window::-webkit-input-placeholder {
-  font-size: 14px;
-  line-height: 21px;
-  text-transform: uppercase;
-  text-align: center;
-  color: #fff;
-}
-.price_window:-ms-input-placeholder {
-  font-size: 14px;
-  line-height: 21px;
-  text-transform: uppercase;
-  text-align: center;
-  color: #fff;
-}
-.price_window::placeholder {
-  font-size: 14px;
-  line-height: 21px;
-  text-transform: uppercase;
-  text-align: center;
-  color: #fff;
 }
 .slider_container {
   position: relative;
@@ -834,8 +829,6 @@ outline-width: 5px;
 }
 .button.show {
   margin: 0 50%;
-  -webkit-transform: translateX(-55%);
-          transform: translateX(-55%);
   padding: 5.5px 30px;
 
   font-size: 14px;
@@ -847,6 +840,9 @@ outline-width: 5px;
   border: 2px solid #fff;
   border-radius: 3px;
   cursor: pointer;
+  
+  -webkit-transform: translateX(-55%);
+          transform: translateX(-55%);
 }
 .button.show:hover {
   color: #000;
@@ -1267,7 +1263,6 @@ outline-width: 5px;
           align-items: center;
   margin: 0;
   padding: 0;
-
 }
 .developed_text {
   display: block;
@@ -1305,12 +1300,10 @@ a:active .dev_logo {
 }
 @-webkit-keyframes shrink {
   0% {-webkit-transform: scale(0, 1);transform: scale(0, 1)}
-  95% {-webkit-transform: scale(1.01, 1);transform: scale(1.01, 1)}
   100% {-webkit-transform: scale(1, 1);transform: scale(1, 1)}
 }
 @keyframes shrink {
   0% {-webkit-transform: scale(0, 1);transform: scale(0, 1)}
-  95% {-webkit-transform: scale(1.01, 1);transform: scale(1.01, 1)}
   100% {-webkit-transform: scale(1, 1);transform: scale(1, 1)}
 }
 @-webkit-keyframes shrink_reverse {

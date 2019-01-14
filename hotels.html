@@ -6,7 +6,7 @@
   <title>HTML Academy: Седона</title>
   <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
   <link href="css/normalize.min.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -48,8 +48,8 @@
           <fieldset class="price_per_day">
             <legend>Стоимость в сутки (Р):</legend>
             <div class="price_container">
-              <input class="price_window" type="text" name="min_price" value="" placeholder="От 0" aria-label="Фильтр по цене в сутки">
-              <input class="price_window" type="text" name="max_price" value="" placeholder="До 3000" aria-label="Фильтр по цене в сутки">
+              <label for="min_price">От <input class="price_window" type="text" name="min_price" value="0" aria-label="Фильтр по цене в сутки"></label>
+              <label for="max_price">До <input class="price_window" type="text" name="max_price" value="3000" aria-label="Фильтр по цене в сутки"></label>
             </div>
             <div class="slider_container">
               <div class="slider_bar"></div>
