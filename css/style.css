@@ -989,7 +989,7 @@ a {
 .down.arrow_button:focus::before {
   outline-color: rgb(77, 144, 254);
   outline-offset: -2px;
-  outline-style: auto;
+  outline-style: solid;
   outline-width: 5px;
 }
 .up.arrow_button:active::before {
