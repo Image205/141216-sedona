@@ -696,7 +696,7 @@ a {
 .filter_checkbox input[type="checkbox"]:active + .checkbox_indicator {
   outline-color: #81b3d2; 
   outline-offset: -2px;
-  outline-style: auto;
+  outline-style: solid;
   outline-width: 5px;
 }
 .filter_checkbox input[type="checkbox"]:disabled + .checkbox_indicator {
